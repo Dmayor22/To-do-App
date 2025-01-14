@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>To-do APP</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="stats_container">
+        <div class="left_stat">
+          <h1>Todo App</h1>
+          <p>Keep it up!</p>
+          <div id="progressbar">
+            <div id="progress"></div>
+          </div>
+        </div>
+        <div class="right_stat">
+          <p id="numbers">0 / 0
+
+          </p>
+        </div>
+      </div>
+
+      <form>
+        <input type="text" placeholder="Write your task" id="Input_task" />
+        <button type="submit" id="Addbtn">+</button>
+      </form>
+
+      <ul class="task_list"></ul>
+    </main>
+
+    <div id="modal_box">
+      <div id="modal_message">
+        <p>Task Lists Reset!</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

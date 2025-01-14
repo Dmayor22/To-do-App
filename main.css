@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background: #000430;
+  --secBackgd: #171c48;
+  --text: #fff;
+  --purple: #828dff;
+  --teal: #24feee;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  min-width: 500px;
+  margin: 50px auto 0 auto;
+}
+
+.stats_container {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--purple);
+  border-radius: 20px;
+  padding: 30px;
+  gap: 50px;
+  width: 100%;
+}
+
+.left_stat {
+  width: 100%;
+}
+
+#progressbar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--secBackgd);
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#progress {
+  width: 0;
+  height: 10px;
+  background-color: var(--teal);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+#numbers {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+form {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+#Input_task {
+  flex: 1;
+  background: var(--secBackgd);
+  border-radius: 10px;
+  padding: 16px;
+  border: 1px solid var(--purple);
+  outline: none;
+  color: var(--text);
+}
+
+#Input_task::placeholder {
+  font-size: 0.8rem;
+  width: 100%;
+  color: var(--text);
+  opacity: 30%;
+}
+
+#Addbtn {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 16px;
+  background: var(--purple);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  font-size: 30px;
+  font-weight: bold;
+  outline: none;
+}
+
+.task_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+  width: 100%;
+}
+.taskItem {
+  display: flex;
+  background-color: var(--secBackgd);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.task {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.task input {
+  width: 20px;
+  height: 20px;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  color: var(--teal);
+}
+
+.icons img {
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#modal_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: none;
+}
+#modal_message {
+  background-color: var(--secBackgd);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  border-radius: 10px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: animatemodal;
+  animation-duration: 0.4s;
+} 
+
+#modal_message p {
+  color: var(--purple);
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Modal Animation */
+@keyframes animatemodal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to{
+    top: 50%;
+    opacity: 1;
+  }
+}
